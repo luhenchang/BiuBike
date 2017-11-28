@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/medical_information_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+    <!--
+    医生详情：medical_header_iv medical_name_tv， medical_tager_one
+    medical_tager_two medical_tager_three medical_informations
+    -->
+    <ImageView
+        android:id="@+id/medical_header_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/medical_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/medical_header_iv"
+        android:text="张医生"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/medical_tager_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medical_name_tv"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/medical_header_iv"
+        android:text="张医生"
+        android:textColor="#d48585"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/medical_tager_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medical_name_tv"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/medical_tager_one"
+        android:text="张医生"
+        android:textColor="#d48585"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/medical_tager_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medical_name_tv"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/medical_tager_two"
+        android:text="张医生"
+        android:textColor="#d48585"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/medical_informations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medical_tager_two"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@+id/medical_header_iv"
+        android:text="张医生"
+        android:textColor="#5b5353"
+        android:textSize="14sp" />
+    <View
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/medical_informations"
+        android:background="#dcdbdb"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/all_pop"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pop_diimiss_tv"
+        android:gravity="center"
+        android:textColor="#181717"
+        android:background="#02d5ff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="有100条数据" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pop_recylerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.biubike.LBSActivity">
+    <com.baidu.mapapi.map.MapView
+        android:layout_above="@+id/bike_layout"
+        android:id="@+id/id_bmapViews"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"/>
+    <RelativeLayout
+        android:id="@+id/hahass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/bike_layout"
+        android:layout_marginStart="13dp">
+
+        <ImageView
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/refresh_icon" />
+
+        <ImageView
+            android:id="@+id/btn_locale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_refresh"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:src="@mipmap/get_location_icon" />
+    </RelativeLayout>
+    <View
+        android:layout_marginTop="200dp"
+        android:id="@+id/view_pop_view"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bike_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edge_shadow_bg"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <!--
+        医生详情：medical_header_iv medical_name_tv， medical_tager_one
+        medical_tager_two medical_tager_three medical_informations
+        -->
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/myRecylerView_show_tv"
+            android:gravity="center"
+            android:text="点击查看更多的结果 V"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <RelativeLayout
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:id="@+id/medical_information_rl"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/medical_header_iv"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/medical_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/medical_header_iv"
+                android:text="张医生"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/medical_tager_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/medical_name_tv"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/medical_header_iv"
+                android:text="张医生"
+                android:textColor="#d48585"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/medical_tager_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/medical_name_tv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/medical_tager_one"
+                android:text="张医生"
+                android:textColor="#d48585"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/medical_tager_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/medical_name_tv"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/medical_tager_two"
+                android:text="张医生"
+                android:textColor="#d48585"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/medical_informations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/medical_tager_two"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/medical_header_iv"
+                android:text="张医生"
+                android:textColor="#5b5353"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

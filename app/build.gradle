@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+android {
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    signingConfigs {
+        compileSdkVersion 26
+        buildToolsVersion "25.0.0"
+        defaultConfig {
+            applicationId "com.biubike"
+            minSdkVersion 19
+            targetSdkVersion 24
+            versionCode 1
+            versionName "1.0"
+        }
+        buildTypes {
+            release {
+                debuggable false
+                zipAlignEnabled false
+                shrinkResources false
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+            }
+        }
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+
+    dependencies {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+        compile files('libs/gson-2.2.4.jar')
+        compile 'com.android.support:appcompat-v7:25.+'
+        compile 'com.android.support:design:25.+'
+        testCompile 'junit:junit:4.12'
+        compile files('libs/baidumapapi_base_v4_1_1.jar')
+        compile files('libs/baidumapapi_map_v4_1_1.jar')
+        compile files('libs/baidumapapi_util_v4_1_1.jar')
+        compile files('libs/BaiduNaviSDK_3.2.0.jar')
+
+
+    }
+}
+dependencies {
+    compile 'com.android.support.constraint:constraint-layout:+'
+}
+
